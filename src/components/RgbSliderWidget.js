@@ -9,10 +9,9 @@
 import { useState } from "react";
 
 export default function Slider() {
-  // const [color, setColor] = useState(null);
-  const [redColor, setRedColor] = useState(null);
-  const [greenColor, setGreenColor] = useState(null);
-  const [blueColor, setBlueColor] = useState(null);
+  const [redColor, setRedColor] = useState(0);
+  const [greenColor, setGreenColor] = useState(0);
+  const [blueColor, setBlueColor] = useState(0);
 
   function handleRed(event) {
     setRedColor(event.target.value);
@@ -57,7 +56,7 @@ export default function Slider() {
       <div>
         <label htmlFor="">Blue</label>
         <input
-          className="green"
+          className="blue"
           type="range"
           min={1}
           max={255}
