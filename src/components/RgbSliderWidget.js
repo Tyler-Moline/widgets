@@ -8,17 +8,62 @@
 
 import { useState } from "react";
 
-export default function HideMe() {
-  const [hide, setHide] = useState(false);
+export default function Slider() {
+  // const [color, setColor] = useState(null);
+  const [redColor, setRedColor] = useState(null);
+  const [greenColor, setGreenColor] = useState(null);
+  const [blueColor, setBlueColor] = useState(null);
+
+  function handleRed(event) {
+    setRedColor(event.target.value);
+  }
+  function handleGreen(event) {
+    setGreenColor(event.target.value);
+  }
+  function handleBlue(event) {
+    setBlueColor(event.target.value);
+  }
 
   return (
-    <div className="hide-wrapper widget">
-      <h1>Hiding Widget</h1>
-      <h1>{hide ? "" : "Hide"}</h1>
+    <div className="slider-wrapper widget">
+      <h1>Color Slider Widget</h1>
+      <div
+        className="visible-color"
+        style={{
+          backgroundColor: `rgb(${redColor}, ${greenColor}, ${blueColor})`,
+        }}
+      ></div>
 
-      <button onClick={() => setHide((hide) => (hide = !hide))}>
-        {hide ? "Show me" : "Hide me"}
-      </button>
+      <div>
+        <label htmlFor="">Red</label>
+        <input
+          className="red"
+          type="range"
+          min={1}
+          max={255}
+          onChange={handleRed}
+        />
+      </div>
+      <div>
+        <label htmlFor="">Green</label>
+        <input
+          className="green"
+          type="range"
+          min={1}
+          max={255}
+          onChange={handleGreen}
+        />
+      </div>
+      <div>
+        <label htmlFor="">Blue</label>
+        <input
+          className="green"
+          type="range"
+          min={1}
+          max={255}
+          onChange={handleBlue}
+        />
+      </div>
     </div>
   );
 }

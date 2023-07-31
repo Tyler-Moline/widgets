@@ -6,6 +6,7 @@ import FontSizer from "./components/FontSizerWidget";
 import TextAlignWidget from "./components/TextAlignWidget";
 import ClockWidget from "./components/ClockWidget";
 import ColorChanger from "./components/ColorChangerWidget";
+import Slider from "./components/RgbSliderWidget";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <TextAlignWidget />
       <ClockWidget />
       <ColorChanger />
+      <Slider />
     </div>
   );
 }
