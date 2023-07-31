@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import CounterWidget from "./components/CounterWidget";
+import Greeting from "./components/ToggleGreetingWidget";
+import HideMe from "./components/HideMeWidget";
+import FontSizer from "./components/FontSizerWidget";
+import TextAlignWidget from "./components/TextAlignWidget";
+import ClockWidget from "./components/ClockWidget";
+import ColorChanger from "./components/ColorChangerWidget";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CounterWidget />
+      <Greeting />
+      <HideMe />
+      <FontSizer />
+      <TextAlignWidget />
+      <ClockWidget />
+      <ColorChanger />
     </div>
   );
 }
