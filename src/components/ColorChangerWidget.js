@@ -2,7 +2,6 @@ import { useState } from "react";
 
 export default function ColorChanger() {
   const [color, setColor] = useState("white");
-  // const [choice, setChoice] = useState(null);
   const [typeField, setTypeField] = useState("");
 
   return (
